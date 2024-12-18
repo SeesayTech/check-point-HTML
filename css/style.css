@@ -1,14 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* --------------------------------------CSS Variable--------------------------------------- */
+:root {
+  --red-border: 0.1px rgba(208, 25, 5, 0.407) solid;
+  --text-bg: #5e5b5b36;
+  --text: #423b3b;
+  --white-text:#fff;
+  --black-bg: black;
+  --link-hover: rgb(208, 25, 5);
+  --roboto: Roboto;
+}
 * {
-  font-family: Roboto;
+  font-family: var(--roboto);
   padding: 0;
   margin: 0;
+}
+section {
+  margin: auto;
+  width: 70%;
+  color: var(--text);
 }
 
 /* --------------------------------------Navbar--------------------------------------- */
 .navbar {
-  background: black;
+  background: var(--black-bg);
   align-content: center;
+  border-bottom: var(--red-border);
 }
 .menu {
   margin: auto;
@@ -23,59 +40,78 @@
   margin: 0 55px;
 }
 .Item a {
-  color: white;
+  color: var(--white-text);
   font-weight: 700;
   font-size: 16px;
   text-decoration: none;
 }
-.Item a:hover{
-    color: rgb(208, 25, 5);
-    transition: .5s;
-  }
+.Item a:hover {
+  color: var(--link-hover);
+  transition: 0.5s;
+}
 /* --------------------------------------Header--------------------------------------- */
-.header-box{
+.header-box {
   width: 100%;
   min-height: calc(60vh - 68px);
-  background: linear-gradient(rgba(23, 20, 20, 0.844),rgba(23, 20, 20, 0.849)),url("../img/background.png");
+  background: linear-gradient(rgba(23, 20, 20, 0.844), rgba(23, 20, 20, 0.849)),
+    url("../img/background.png");
   background-repeat: repeat;
   background-position: center;
   background-size: contain;
 }
-.header-title{
+.header-title {
   font-size: 80px;
-  color: white;
+  color: var(--white-text);
   text-align: center;
   padding-top: 8%;
 }
 
-.header-sub{
+.header-sub {
   margin-top: 20px;
-  color: white;
+  color: var(--white-text);
   text-align: center;
 }
 
+/* --------------------------------------About--------------------------------------- */
+.about {
+  padding: 50px;
+  margin-bottom: 20px;
+  background-color: var(--text-bg);
+}
+.about-img {
+  margin: 0 50px 0 50px;
+  display: inline-block;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.about-text {
+  width: 55%;
+  padding: 20px;
+  display: inline-block;
+  box-sizing: border-box;
+}
 /* --------------------------------------Header--------------------------------------- */
+/* --------------------------------------Header--------------------------------------- */
+/* --------------------------------------Header--------------------------------------- */
+/* --------------------------------------Footer--------------------------------------- */
+.footer{
+  background-color: var(--black-bg);
+  height: 20;
+  color: var(--white-text);
+}
+.Link-menu{
+  display: block;
+  padding: 50px;
+}
+.Link-menu-list{
+  list-style: none;
+}
+.Link-item a{
+  color: var(--white-text);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+.Link-item a:hover{
+  color: var(--link-hover);
+
+}
